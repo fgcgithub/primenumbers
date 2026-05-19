@@ -34,3 +34,6 @@ def get_primes(start: int, end: int):
         "count": len(primes),
         "primes": primes
     }
+@app.get("/")
+def home():
+    return {"message": "Willkommen bei meiner Primzahlen-API! Gehe zu /docs um sie auszuprobieren."}
