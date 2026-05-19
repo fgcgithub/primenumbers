@@ -36,4 +36,15 @@ def get_primes(start: int, end: int):
     }
 @app.get("/")
 def home():
-    return {"message": "Willkommen bei meiner Primzahlen-API! Gehe zu /docs um sie auszuprobieren."}
+    base_url = "[https://primeapp-hwfwbehndfffajds.canadaeast-01.azurewebsites.net](https://primeapp-hwfwbehndfffajds.canadaeast-01.azurewebsites.net)"
+    return {
+        "message": "Willkommen bei deiner Azure Primzahlen-API!",
+        "status": "Online und betriebsbereit 🚀",
+        "description": "Dieser Microservice berechnet alle Primzahlen in einem von dir definierten Bereich.",
+        "interactive_swagger_documentation": f"{base_url}/docs",
+        "example_api_call": {
+            "description": "Berechne alle Primzahlen von 1 bis 100",
+            "url": f"{base_url}/api/primes?start=1&end=100"
+        }
+    }
+
